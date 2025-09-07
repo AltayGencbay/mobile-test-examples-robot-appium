@@ -1,19 +1,135 @@
-## Start Appium Server
+# 📱 Mobile Tests with Robot Framework & Appium
+
+This repository contains **end-to-end automated mobile tests** for **Android** and **iOS** using  
+[Robot Framework](https://robotframework.org/) + [Appium](https://appium.io/).  
+The tests cover **Login**, **Cart**, and other flows in [Sauce Labs Demo App](https://github.com/saucelabs/my-demo-app).
+
+---
+
+## 📌 Requirements
+
+Before running tests, make sure you have the following installed:
+
+- [Python 3.12+](https://www.python.org/downloads/)
+- [pip](https://pip.pypa.io/en/stable/)
+- [Node.js 20+](https://nodejs.org/)
+- [Appium 3.x](https://appium.io/)  
+  ```bash
+  npm install -g appium@next
+-  Appium Inspector
+-  Git
+
+Android
+	•	Android Studio
+	•	Android SDK + Emulator
+	•	Example command to create and start emulator:
+
+iOS (Mac only)
+	•	Xcode
+	•	Command Line Tools:
+    xcode-select --install
+
+- 	WebDriverAgent (installed with appium-xcuitest-driver)
+
+---
+
+## 📂 Project Structure
+MOBILE TESTS/
+│
+├── AndroidLocators/         # Android element locators
+├── AndroidStepDefinitions/  # Android step keywords
+├── AndroidTestCases/        # Android test scenarios
+│
+├── iOSLocators/             # iOS element locators
+├── iOSStepDefinitions/      # iOS step keywords
+├── iOSTestCases/            # iOS test scenarios
+│
+├── venv/                    # Python virtual environment (ignored in git)
+├── README.md
+└── requirements.txt
+
+---
+
+## Installation
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/altaygencbay/mobile-tests-robot-appium.git
+   cd mobile-tests-robot-appium
+
+2.	Create a virtual environment:
+   python3 -m venv venv
+   source venv/bin/activate
+
+3.	Install dependencies:
+   pip install -r requirements.txt
+
+---
+
+## Running Tests
+1. Android
+robot Android/AndroidTestCases/test_android_login.robot
+
+2. iOS
+robot iOS/iOSTestCases/test_ios_login.robot
+
+---
+
+## Capabilities
+
+# Android
+{
+  "platformName": "Android",
+  "automationName": "UiAutomator2",
+  "deviceName": "emulator-5554",
+  "app": "/path/to/mda-2.2.0-25.apk",
+  "noReset": false
+}
+
+# iOS
+{
+  "platformName": "iOS",
+  "automationName": "XCUITest",
+  "deviceName": "iPhone 14 Pro",
+  "platformVersion": "18.6",
+  "app": "/path/to/My Demo App.app",
+  "noReset": false,
+  "connectHardwareKeyboard": true
+}
+
+---
+
+After test execution, Robot Framework generates:
+	•	report.html
+	•	log.html
+	•	output.xml
+
+Open report.html in your browser to view test results.
+
+---
+
+CI/CD (Future Integration)
+
+This project can be extended with:
+	•	GitHub Actions
+	•	Bitrise (for mobile emulator/simulator support)
+
+--- 
+
+##Commands
+
+# Start Appium Server
 appium
 
-## Android
+# Android
 robot Android/AndroidTestCases
 robot -t "Login-01" Android/AndroidTestCases
 
-## iOS
+# iOS
 robot iOS/iOSTestCases
 robot -t "Login-01" iOS/iOSTestCases
 
-## Tap coordinate (example)
-Tap With Positions    200    780
-
-
-## Devices
+# Devices
 List → xcrun simctl list devices
 
 -- iOS 18.6 --
@@ -30,11 +146,12 @@ List → xcrun simctl list devices
     iPad Air 13-inch (M3) (D84B6421-0C7C-4CDC-B2B4-912041073145) (Shutdown) 
     iPad Air 11-inch (M3) (1BE54C66-6819-414C-9388-078D413F57BE) (Shutdown)
 
+# Start Emulator
 xcrun simctl boot 4934E635-2F83-4C2B-9C04-49CE23CC88E0
 open -a Simulator
 
-## Robot Server
+# Robot Server
 appium -p 4723
 
-## Inspector Server
+# Inspector Server
 appium -p 4725 --allow-cors

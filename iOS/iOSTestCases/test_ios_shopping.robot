@@ -1,5 +1,6 @@
 *** Settings ***
-Resource    ../iOSStepDefinitions/ios_login_steps.robot
+Resource    ../iOSStepDefinitions/ios_shopping_steps.robot
+Test Teardown    Run Keyword If Test Failed    Capture Page Screenshot
 
 *** Test Cases ***
 

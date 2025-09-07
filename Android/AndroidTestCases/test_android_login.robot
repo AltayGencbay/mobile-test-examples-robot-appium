@@ -1,5 +1,6 @@
 *** Settings ***
 Resource    ../AndroidStepDefinitions/android_login_steps.robot
+Test Teardown    Run Keyword If Test Failed    Capture Page Screenshot
 
 *** Test Cases ***
 

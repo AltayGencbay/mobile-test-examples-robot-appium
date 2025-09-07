@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../iOSLocators/ios_login_locators.robot
+Resource    ../iOSLocators/ios_shopping_locators.robot
 Library     AppiumLibrary
 
 *** Keywords ***
