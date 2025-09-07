@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.6 on darwin)" generated="2025-09-07T16:05:47.552941" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Ios Login" source="/Users/altaygencbay/Desktop/MOBILE/MOBILE TESTS/iOS/iOSTestCases/test_ios_login.robot">
+<test id="s1-t1" name="Shopping-01" line="6">
+<kw name="Open iOS App" owner="ios_login_steps">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=iOS</arg>
+<arg>automationName=XCUITest</arg>
+<arg>deviceName=iPhone 14 Pro</arg>
+<arg>platformVersion=18.6</arg>
+<arg>app=/Users/altaygencbay/Desktop/MOBILE/APKs/My Demo App.app</arg>
+<arg>newCommandTimeout=300</arg>
+<arg>noReset=${False}</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" start="2025-09-07T16:05:47.649186" elapsed="3.096266"/>
+</kw>
+<status status="PASS" start="2025-09-07T16:05:47.648969" elapsed="3.096791"/>
+</kw>
+<kw name="Click Cart Button" owner="ios_login_steps">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-07T16:05:50.748175" level="INFO">Clicking element 'accessibility_id=Cart-tab-item'.</msg>
+<arg>${CART_BUTTON}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T16:05:50.746679" elapsed="0.806918"/>
+</kw>
+<status status="PASS" start="2025-09-07T16:05:50.746247" elapsed="0.807549"/>
+</kw>
+<kw name="Verify No Items Page and Go Shopping Button Is Visible" owner="ios_login_steps">
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2025-09-07T16:05:51.693342" level="INFO">Current page contains text 'No Items'.</msg>
+<arg>No Items</arg>
+<doc>Verifies that the current page contains ``text``.</doc>
+<status status="PASS" start="2025-09-07T16:05:51.554643" elapsed="0.138836"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2025-09-07T16:05:51.807271" level="INFO">Current page contains text 'Oh no! Your cart is empty. Fill it up with swag to complete your purchase.'.</msg>
+<arg>Oh no! Your cart is empty. Fill it up with swag to complete your purchase.</arg>
+<doc>Verifies that the current page contains ``text``.</doc>
+<status status="PASS" start="2025-09-07T16:05:51.693679" elapsed="0.113720"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2025-09-07T16:05:51.845837" level="INFO">Current page contains element 'accessibility_id=GoShopping'.</msg>
+<arg>${GO_SHOPPING_BUTTON}</arg>
+<doc>Verifies that the current page contains the element with the ``locator``.</doc>
+<status status="PASS" start="2025-09-07T16:05:51.807603" elapsed="0.038435"/>
+</kw>
+<status status="PASS" start="2025-09-07T16:05:51.554235" elapsed="0.291991"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and the webdriver session.</doc>
+<status status="PASS" start="2025-09-07T16:05:51.846528" elapsed="1.046028"/>
+</kw>
+<doc>POSITIVE - User clicks cart button → should see No items text</doc>
+<status status="PASS" start="2025-09-07T16:05:47.648689" elapsed="5.244263"/>
+</test>
+<test id="s1-t2" name="Shopping-02" line="13">
+<kw name="Open iOS App" owner="ios_login_steps">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=iOS</arg>
+<arg>automationName=XCUITest</arg>
+<arg>deviceName=iPhone 14 Pro</arg>
+<arg>platformVersion=18.6</arg>
+<arg>app=/Users/altaygencbay/Desktop/MOBILE/APKs/My Demo App.app</arg>
+<arg>newCommandTimeout=300</arg>
+<arg>noReset=${False}</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" start="2025-09-07T16:05:52.894586" elapsed="3.008454"/>
+</kw>
+<status status="PASS" start="2025-09-07T16:05:52.894250" elapsed="3.009015"/>
+</kw>
+<kw name="Click Cart Button" owner="ios_login_steps">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-07T16:05:55.905594" level="INFO">Clicking element 'accessibility_id=Cart-tab-item'.</msg>
+<arg>${CART_BUTTON}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T16:05:55.904133" elapsed="0.816425"/>
+</kw>
+<status status="PASS" start="2025-09-07T16:05:55.903707" elapsed="0.817134"/>
+</kw>
+<kw name="Click Go Shopping Button" owner="ios_login_steps">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-07T16:05:56.723304" level="INFO">Clicking element 'accessibility_id=GoShopping'.</msg>
+<arg>${GO_SHOPPING_BUTTON}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T16:05:56.722356" elapsed="0.722916"/>
+</kw>
+<status status="PASS" start="2025-09-07T16:05:56.721485" elapsed="0.723914"/>
+</kw>
+<kw name="Verify Products Page Is Visible" owner="ios_login_steps">
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2025-09-07T16:05:57.565686" level="INFO">Current page contains element 'xpath=//XCUIElementTypeStaticText[@name="Product Name" and @label="Sauce Labs Backpack - Black"]'.</msg>
+<msg time="2025-09-07T16:05:57.565802" level="INFO">xpath criteria: //XCUIElementTypeStaticText[@name="Product Name" and @label="Sauce Labs Backpack - Black"]</msg>
+<arg>${PRODUCTS_PAGE_TITLE}</arg>
+<doc>Verifies that the current page contains the element with the ``locator``.</doc>
+<status status="PASS" start="2025-09-07T16:05:57.446019" elapsed="0.119829"/>
+</kw>
+<status status="PASS" start="2025-09-07T16:05:57.445684" elapsed="0.120249"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and the webdriver session.</doc>
+<status status="PASS" start="2025-09-07T16:05:57.566115" elapsed="1.074732"/>
+</kw>
+<doc>POSITIVE - User clicks go shopping button on no items page → should see products page</doc>
+<status status="PASS" start="2025-09-07T16:05:52.893445" elapsed="5.747758"/>
+</test>
+<test id="s1-t3" name="Shopping-03" line="21">
+<kw name="Open iOS App" owner="ios_login_steps">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=iOS</arg>
+<arg>automationName=XCUITest</arg>
+<arg>deviceName=iPhone 14 Pro</arg>
+<arg>platformVersion=18.6</arg>
+<arg>app=/Users/altaygencbay/Desktop/MOBILE/APKs/My Demo App.app</arg>
+<arg>newCommandTimeout=300</arg>
+<arg>noReset=${False}</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" start="2025-09-07T16:05:58.642928" elapsed="3.038794"/>
+</kw>
+<status status="PASS" start="2025-09-07T16:05:58.642548" elapsed="3.039345"/>
+</kw>
+<kw name="Click to a Product" owner="ios_login_steps">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-07T16:06:01.684169" level="INFO">Clicking element 'xpath=(//XCUIElementTypeOther[@name="ProductItem"])[1]'.</msg>
+<msg time="2025-09-07T16:06:02.496107" level="INFO">xpath criteria: (//XCUIElementTypeOther[@name="ProductItem"])[1]</msg>
+<arg>${PRODUCT_BUTTON}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T16:06:01.682646" elapsed="0.813603"/>
+</kw>
+<status status="PASS" start="2025-09-07T16:06:01.682255" elapsed="0.814093"/>
+</kw>
+<kw name="Verify Add to Cart Button Is Visible" owner="ios_login_steps">
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2025-09-07T16:06:02.592346" level="INFO">Current page contains element 'accessibility_id=AddToCart'.</msg>
+<arg>${ADD_TO_CART_BUTTON}</arg>
+<doc>Verifies that the current page contains the element with the ``locator``.</doc>
+<status status="PASS" start="2025-09-07T16:06:02.496992" elapsed="0.095757"/>
+</kw>
+<status status="PASS" start="2025-09-07T16:06:02.496631" elapsed="0.096271"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and the webdriver session.</doc>
+<status status="PASS" start="2025-09-07T16:06:02.593243" elapsed="1.072289"/>
+</kw>
+<doc>POSITIVE - User clicks to product → should see add to cart button</doc>
+<status status="PASS" start="2025-09-07T16:05:58.641660" elapsed="5.024251"/>
+</test>
+<test id="s1-t4" name="Shopping-04" line="28">
+<kw name="Open iOS App" owner="ios_login_steps">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=iOS</arg>
+<arg>automationName=XCUITest</arg>
+<arg>deviceName=iPhone 14 Pro</arg>
+<arg>platformVersion=18.6</arg>
+<arg>app=/Users/altaygencbay/Desktop/MOBILE/APKs/My Demo App.app</arg>
+<arg>newCommandTimeout=300</arg>
+<arg>noReset=${False}</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" start="2025-09-07T16:06:03.667849" elapsed="3.087956"/>
+</kw>
+<status status="PASS" start="2025-09-07T16:06:03.667452" elapsed="3.088503"/>
+</kw>
+<kw name="Click to a Product" owner="ios_login_steps">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-07T16:06:06.758017" level="INFO">Clicking element 'xpath=(//XCUIElementTypeOther[@name="ProductItem"])[1]'.</msg>
+<msg time="2025-09-07T16:06:07.543785" level="INFO">xpath criteria: (//XCUIElementTypeOther[@name="ProductItem"])[1]</msg>
+<arg>${PRODUCT_BUTTON}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T16:06:06.756562" elapsed="0.787348"/>
+</kw>
+<status status="PASS" start="2025-09-07T16:06:06.756236" elapsed="0.787799"/>
+</kw>
+<kw name="Click Add to Cart Button" owner="ios_login_steps">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-07T16:06:07.546363" level="INFO">Clicking element 'accessibility_id=AddToCart'.</msg>
+<arg>${ADD_TO_CART_BUTTON}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T16:06:07.544726" elapsed="0.441511"/>
+</kw>
+<status status="PASS" start="2025-09-07T16:06:07.544354" elapsed="0.441948"/>
+</kw>
+<kw name="Click Cart Button" owner="ios_login_steps">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-07T16:06:07.987063" level="INFO">Clicking element 'accessibility_id=Cart-tab-item'.</msg>
+<arg>${CART_BUTTON}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T16:06:07.986572" elapsed="0.864250"/>
+</kw>
+<status status="PASS" start="2025-09-07T16:06:07.986437" elapsed="0.864513"/>
+</kw>
+<kw name="Verify Product is on My Cart Page and Proceed To Checkout Button Is Visible" owner="ios_login_steps">
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2025-09-07T16:06:08.924779" level="INFO">Current page contains element 'accessibility_id=Sauce Labs Backpack - Black'.</msg>
+<arg>${PRODUCT_NAME_MY_CART}</arg>
+<doc>Verifies that the current page contains the element with the ``locator``.</doc>
+<status status="PASS" start="2025-09-07T16:06:08.851724" elapsed="0.073206"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2025-09-07T16:06:08.984938" level="INFO">Current page contains element 'accessibility_id=Proceed To Checkout'.</msg>
+<arg>${PROCEED_BUTTON}</arg>
+<doc>Verifies that the current page contains the element with the ``locator``.</doc>
+<status status="PASS" start="2025-09-07T16:06:08.925144" elapsed="0.059999"/>
+</kw>
+<status status="PASS" start="2025-09-07T16:06:08.851292" elapsed="0.134375"/>
+</kw>
+<doc>POSITIVE - User selects product and clicks add to cart button, clicks cart button → should see proceed to checkout button and product on my cart page</doc>
+<status status="PASS" start="2025-09-07T16:06:03.666308" elapsed="5.319615"/>
+</test>
+<test id="s1-t5" name="Shopping-05" line="36">
+<kw name="Open iOS App" owner="ios_login_steps">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=iOS</arg>
+<arg>automationName=XCUITest</arg>
+<arg>deviceName=iPhone 14 Pro</arg>
+<arg>platformVersion=18.6</arg>
+<arg>app=/Users/altaygencbay/Desktop/MOBILE/APKs/My Demo App.app</arg>
+<arg>newCommandTimeout=300</arg>
+<arg>noReset=${False}</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" start="2025-09-07T16:06:08.987264" elapsed="2.998410"/>
+</kw>
+<status status="PASS" start="2025-09-07T16:06:08.986930" elapsed="2.998943"/>
+</kw>
+<kw name="Click to a Product" owner="ios_login_steps">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-07T16:06:11.988041" level="INFO">Clicking element 'xpath=(//XCUIElementTypeOther[@name="ProductItem"])[1]'.</msg>
+<msg time="2025-09-07T16:06:12.820898" level="INFO">xpath criteria: (//XCUIElementTypeOther[@name="ProductItem"])[1]</msg>
+<arg>${PRODUCT_BUTTON}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T16:06:11.986571" elapsed="0.834449"/>
+</kw>
+<status status="PASS" start="2025-09-07T16:06:11.986235" elapsed="0.834889"/>
+</kw>
+<kw name="Click Add to Cart Button" owner="ios_login_steps">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-07T16:06:12.823282" level="INFO">Clicking element 'accessibility_id=AddToCart'.</msg>
+<arg>${ADD_TO_CART_BUTTON}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T16:06:12.822007" elapsed="0.453020"/>
+</kw>
+<status status="PASS" start="2025-09-07T16:06:12.821517" elapsed="0.453706"/>
+</kw>
+<kw name="Click Cart Button" owner="ios_login_steps">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-07T16:06:13.277881" level="INFO">Clicking element 'accessibility_id=Cart-tab-item'.</msg>
+<arg>${CART_BUTTON}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T16:06:13.276189" elapsed="0.763730"/>
+</kw>
+<status status="PASS" start="2025-09-07T16:06:13.275673" elapsed="0.764461"/>
+</kw>
+<kw name="Click Proceed to Checkout Button" owner="ios_login_steps">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-07T16:06:14.042860" level="INFO">Clicking element 'accessibility_id=Proceed To Checkout'.</msg>
+<arg>${PROCEED_BUTTON}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-07T16:06:14.041280" elapsed="0.789107"/>
+</kw>
+<status status="PASS" start="2025-09-07T16:06:14.040805" elapsed="0.789814"/>
+</kw>
+<kw name="Verify Login Page Is Visible" owner="ios_login_steps">
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2025-09-07T16:06:14.923144" level="INFO">Current page contains element 'accessibility_id=Select a username from the list below'.</msg>
+<arg>${LOGIN_PAGE}</arg>
+<doc>Verifies that the current page contains the element with the ``locator``.</doc>
+<status status="PASS" start="2025-09-07T16:06:14.831901" elapsed="0.091331"/>
+</kw>
+<status status="PASS" start="2025-09-07T16:06:14.831169" elapsed="0.092130"/>
+</kw>
+<doc>POSITIVE - User adds product to cart and clicks proceed to checkout button → should see login page</doc>
+<status status="PASS" start="2025-09-07T16:06:08.986207" elapsed="5.937200"/>
+</test>
+<status status="PASS" start="2025-09-07T16:05:47.553417" elapsed="27.370301"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Ios Login" id="s1" pass="5" fail="0" skip="0">Test Ios Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

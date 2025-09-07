@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.6 on darwin)" generated="2025-09-06T21:32:58.993710" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Login" source="/Users/altaygencbay/Desktop/MOBILE/Test Project/TestCases/test_login.robot">
+<test id="s1-t1" name="Valid Login Scenario" line="5">
+<kw name="User opens the app" owner="login_steps">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>app=/Users/altaygencbay/Desktop/MOBILE/APKs/mda-2.2.0-25.apk</arg>
+<arg>appPackage=com.saucelabs.mydemoapp.android</arg>
+<arg>appActivity=com.saucelabs.mydemoapp.android.view.activities.SplashActivity</arg>
+<arg>appWaitActivity=com.saucelabs.mydemoapp.android.view.activities.*</arg>
+<arg>noReset=${False}</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" start="2025-09-06T21:32:59.048738" elapsed="2.300546"/>
+</kw>
+<status status="PASS" start="2025-09-06T21:32:59.048515" elapsed="2.300913"/>
+</kw>
+<kw name="User opens the menu" owner="login_steps">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-06T21:33:01.350840" level="INFO">Clicking element 'accessibility_id=View menu'.</msg>
+<arg>${MENU_BUTTON}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T21:33:01.349931" elapsed="2.216766"/>
+</kw>
+<status status="PASS" start="2025-09-06T21:33:01.349683" elapsed="2.217346"/>
+</kw>
+<kw name="User clicks login button" owner="login_steps">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-06T21:33:03.569243" level="INFO">Clicking element 'accessibility_id=Login Menu Item'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T21:33:03.567926" elapsed="0.148948"/>
+</kw>
+<status status="PASS" start="2025-09-06T21:33:03.567485" elapsed="0.149646"/>
+</kw>
+<kw name="User enters username" owner="login_steps">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-09-06T21:33:03.719515" level="INFO">Typing text 'bod@example.com' into text field 'id=com.saucelabs.mydemoapp.android:id/nameET'</msg>
+<msg time="2025-09-06T21:33:04.414142" level="INFO">criteria is com.saucelabs.mydemoapp.android:id/nameET</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T21:33:03.718215" elapsed="0.696121"/>
+</kw>
+<arg>bod@example.com</arg>
+<status status="PASS" start="2025-09-06T21:33:03.717784" elapsed="0.696741"/>
+</kw>
+<kw name="User enters password" owner="login_steps">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-09-06T21:33:04.417847" level="INFO">Typing text '10203040' into text field 'id=com.saucelabs.mydemoapp.android:id/passwordET'</msg>
+<msg time="2025-09-06T21:33:04.991495" level="INFO">criteria is com.saucelabs.mydemoapp.android:id/passwordET</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T21:33:04.415701" elapsed="0.575988"/>
+</kw>
+<arg>10203040</arg>
+<status status="PASS" start="2025-09-06T21:33:04.415038" elapsed="0.576839"/>
+</kw>
+<kw name="App is closed" owner="login_steps">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and the webdriver session.</doc>
+<status status="PASS" start="2025-09-06T21:33:04.992838" elapsed="0.191833"/>
+</kw>
+<status status="PASS" start="2025-09-06T21:33:04.992351" elapsed="0.192528"/>
+</kw>
+<status status="PASS" start="2025-09-06T21:32:59.048222" elapsed="6.137039"/>
+</test>
+<test id="s1-t2" name="Invalid Login Scenario" line="13">
+<kw name="User opens the app" owner="login_steps">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>app=/Users/altaygencbay/Desktop/MOBILE/APKs/mda-2.2.0-25.apk</arg>
+<arg>appPackage=com.saucelabs.mydemoapp.android</arg>
+<arg>appActivity=com.saucelabs.mydemoapp.android.view.activities.SplashActivity</arg>
+<arg>appWaitActivity=com.saucelabs.mydemoapp.android.view.activities.*</arg>
+<arg>noReset=${False}</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" start="2025-09-06T21:33:05.186381" elapsed="2.232205"/>
+</kw>
+<status status="PASS" start="2025-09-06T21:33:05.186096" elapsed="2.232624"/>
+</kw>
+<kw name="User opens the menu" owner="login_steps">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-06T21:33:07.420547" level="INFO">Clicking element 'accessibility_id=View menu'.</msg>
+<arg>${MENU_BUTTON}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T21:33:07.419395" elapsed="2.210766"/>
+</kw>
+<status status="PASS" start="2025-09-06T21:33:07.419017" elapsed="2.211356"/>
+</kw>
+<kw name="User clicks login button" owner="login_steps">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-09-06T21:33:09.632581" level="INFO">Clicking element 'accessibility_id=Login Menu Item'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T21:33:09.631394" elapsed="0.152909"/>
+</kw>
+<status status="PASS" start="2025-09-06T21:33:09.631007" elapsed="0.153351"/>
+</kw>
+<kw name="User enters username" owner="login_steps">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-09-06T21:33:09.785055" level="INFO">Typing text 'bod@example.com' into text field 'id=com.saucelabs.mydemoapp.android:id/nameET'</msg>
+<msg time="2025-09-06T21:33:10.482487" level="INFO">criteria is com.saucelabs.mydemoapp.android:id/nameET</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T21:33:09.784624" elapsed="0.698051"/>
+</kw>
+<arg>bod@example.com</arg>
+<status status="PASS" start="2025-09-06T21:33:09.784485" elapsed="0.698382"/>
+</kw>
+<kw name="User enters password" owner="login_steps">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-09-06T21:33:10.485478" level="INFO">Typing text 'wrongpassword' into text field 'id=com.saucelabs.mydemoapp.android:id/passwordET'</msg>
+<msg time="2025-09-06T21:33:11.052639" level="INFO">criteria is com.saucelabs.mydemoapp.android:id/passwordET</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T21:33:10.483985" elapsed="0.568844"/>
+</kw>
+<arg>wrongpassword</arg>
+<status status="PASS" start="2025-09-06T21:33:10.483360" elapsed="0.569660"/>
+</kw>
+<kw name="App is closed" owner="login_steps">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and the webdriver session.</doc>
+<status status="PASS" start="2025-09-06T21:33:11.054141" elapsed="0.244441"/>
+</kw>
+<status status="PASS" start="2025-09-06T21:33:11.053490" elapsed="0.245188"/>
+</kw>
+<status status="PASS" start="2025-09-06T21:33:05.185744" elapsed="6.113107"/>
+</test>
+<status status="PASS" start="2025-09-06T21:32:58.994559" elapsed="12.304706"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Login" id="s1" pass="2" fail="0" skip="0">Test Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
